@@ -1,0 +1,23 @@
+.side-nav {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background: #ffb8e0;
+    transition: 0.3s;
+    z-index: 2;
+}
+.side-nav.open {
+    transform: translateX(0);
+}
+@media (max-width: 800px) {
+    .side-nav {
+
+        width: 100%;
+    }
+    .side-nav.open {
+        transform: translateY(100%);
+    }
+}
