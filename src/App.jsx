@@ -15,7 +15,7 @@ function App() {
     return (
         <>
             <Navbar setSideNavOpen={setSideNavOpen}/>
-            <SideNav sideNavOpen={sideNavOpen}/>
+            <SideNav sideNavOpen={sideNavOpen} setSideNavOpen={setSideNavOpen}/>
             <div className="banner">
                 <img
                     src="https://st3.depositphotos.com/1854227/12969/i/950/depositphotos_129694254-stock-photo-table-with-cakes-cookies-cupcakes.jpg"/>
@@ -28,7 +28,7 @@ function App() {
             <div className="items-section">
                 <div className="item">
                     <div className="img-container">
-                        <img src={chocolateChipCookie}/>
+                        <img src={chocolateChipCookie} loading={"lazy"}/>
                     </div>
                     <h1>Chocolate Chip Cookie</h1>
                     <div className="buttons">
@@ -38,7 +38,7 @@ function App() {
                 </div>
                 <div className="item">
                     <div className="img-container">
-                        <img src={mmCookie}/>
+                        <img src={mmCookie} loading={"lazy"}/>
                     </div>
                     <h1>M&M Cookie</h1>
                     <div className="buttons">
@@ -48,7 +48,7 @@ function App() {
                 </div>
                 <div className="item">
                     <div className="img-container">
-                        <img src={sugarCookie}/>
+                        <img src={sugarCookie} loading={"lazy"}/>
                     </div>
                     <h1>Sugar Cookie</h1>
                     <div className="buttons">
@@ -58,7 +58,7 @@ function App() {
                 </div>
                 <div className="item">
                     <div className="img-container">
-                        <img src={oreoAndCreamCookie}/>
+                        <img src={oreoAndCreamCookie} loading={"lazy"}/>
                     </div>
                     <h1>Oreo & Cream Cookie</h1>
                     <div className="buttons">
@@ -68,7 +68,7 @@ function App() {
                 </div>
                 <div className="item">
                     <div className="img-container">
-                        <img src={strawberryWhiteChocolateCookie}/>
+                        <img src={strawberryWhiteChocolateCookie} loading={"lazy"}/>
                     </div>
                     <h1>Strawberry White Chocolate Cookie</h1>
                     <div className="buttons">
@@ -78,7 +78,7 @@ function App() {
                 </div>
                 <div className="item">
                     <div className="img-container">
-                        <img src={mmChocolateChipCookie}/>
+                        <img src={mmChocolateChipCookie} loading={"lazy"}/>
                     </div>
                     <h1>M&M Chocolate Chip Cookie</h1>
                     <div className="buttons">

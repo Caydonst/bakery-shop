@@ -10,7 +10,7 @@ export default function Navbar({setSideNavOpen}) {
         console.log(scrollY)
     })
 
-    const alpha = Math.min(scrollY / 200, 1);
+    const alpha = Math.min(scrollY / 100, 1);
 
     const changeSideNav = () => {
         setSideNavOpen(prev => !prev);
