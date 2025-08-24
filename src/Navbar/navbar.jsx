@@ -7,13 +7,13 @@ export default function Navbar({setSideNavOpen}) {
 
     window.addEventListener('scroll', () => {
         setScrollY(window.scrollY);
-        console.log(scrollY)
     })
 
     const alpha = Math.min(scrollY / 100, 1);
 
     const changeSideNav = () => {
         setSideNavOpen(prev => !prev);
+        document.body.classList.add("no-scroll");
     }
 
     return (
