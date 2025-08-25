@@ -11,6 +11,8 @@ export default function HomePage() {
             const y = window.scrollY;
             if (window.innerWidth < 500) {
                 setOrderNowActive(y > 500);
+            } else {
+                setOrderNowActive(false);
             }
         };
 

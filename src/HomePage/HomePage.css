@@ -1,3 +1,6 @@
+.HomePage a {
+    text-decoration: none;
+}
 .banner {
     width: 100%;
     height: 80svh;
