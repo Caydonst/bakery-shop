@@ -17,7 +17,7 @@ export default function Navbar({setSideNavOpen}) {
     }
 
     return (
-        <div className="navbar" style={{backgroundColor: `rgba(255, 184, 224, ${alpha})`}}>
+        <div id={"navbar"} className="navbar" style={{backgroundColor: `rgba(255, 184, 224, ${alpha})`}}>
             <button className="menu-btn" onClick={() => changeSideNav()}><Bars3Icon className={"menuIcon"} /></button>
             <h1 className="title">Batter & Bliss</h1>
             <button className="order-now-btn">Order Now</button>

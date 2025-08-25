@@ -27,6 +27,10 @@
     align-items: center;
     background: transparent;
 }
+.navbar.not-home {
+    position: sticky;
+    top: 0;
+}
 .menu-btn .menuIcon {
     width: 30px;
     height: 30px;
