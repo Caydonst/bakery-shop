@@ -1,0 +1,108 @@
+.side-nav {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 350px;
+    background: #05000f;
+    transition: 0.3s;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.side-nav.open {
+    transform: translateX(0);
+}
+.close-btn {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: #ffb8e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+.close-icon {
+    width: 30px;
+    height: 30px;
+    color: #05000f;
+    transition: 0.3s;
+}
+.close-btn:hover .close-icon {
+    rotate: 180deg;
+}
+.all-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.nav-links button {
+    background: transparent;
+    border: none;
+    color: #ffb8e0;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.nav-links button:hover {
+    color: #fff;
+}
+.nav-links a {
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    color: #ffb8e0;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.nav-links a:hover {
+    color: #fff;
+}
+.all-links .socials-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 30px;
+}
+.all-links .socials-container a {
+    color: #ffb8e0;
+}
+@media (max-width: 800px) {
+    .side-nav {
+        transform: translateX(0);
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .side-nav.open {
+        opacity: 1;
+        visibility: visible;
+    }
+    .all-links {
+        align-items: center;
+    }
+    .nav-links {
+        align-items: center;
+    }
+}

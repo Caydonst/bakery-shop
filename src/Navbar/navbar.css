@@ -1,0 +1,76 @@
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 2;
+}
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+}
+.navbar .title {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: nowrap;
+}
+.navbar .menu-btn {
+    font-size: 30px;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.navbar.not-home {
+    position: sticky;
+    top: 0;
+    background-color: #ffb8e0;
+}
+.menu-btn .menuIcon {
+    width: 30px;
+    height: 30px;
+    color: #000;
+}
+.navbar .order-now-btn {
+    width: 140px;
+    height: 40px;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar .order-now-btn:hover {
+    background: #141414;
+}
+@media (max-width: 600px) {
+    .navbar .order-now-btn {
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .navbar {
+        height: 60px;
+    }
+    .navbar .title {
+        font-size: 24px;
+    }
+    .navbar .menu-btn {
+        font-size: 24px;
+    }
+}
