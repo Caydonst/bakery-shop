@@ -6,12 +6,12 @@ import SideNav from "./SideNav/sideNav.jsx"
 import HomePage from "./HomePage/HomePage.jsx"
 import Footer from "./Footer/footer.jsx"
 import ProductPage from "./ProductPage/ProductPage.jsx"
+import OrderPage from "./OrderPage/OrderPage.jsx"
 import ScrollToTop from "./scrollToTop.jsx"
 
 
 function App() {
     const [sideNavOpen, setSideNavOpen] = useState(false);
-    const [changeNavbar, setChangeNavbar] = useState(false);
 
     return (
         <>
@@ -22,6 +22,7 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<HomePage />} />
                 <Route path={"/product/:id"} element={<ProductPage />} />
+                <Route path={"/order"} element={<OrderPage />} />
             </Routes>
             <Footer />
         </>

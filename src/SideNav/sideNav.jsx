@@ -18,7 +18,7 @@ export default function SideNav({sideNavOpen, setSideNavOpen}) {
             <div className={"all-links"}>
                 <div className={"nav-links"}>
                     <Link to={"/"} onClick={closeSideNav}>Home</Link>
-                    <button>Order</button>
+                    <Link to={"/order"} onClick={closeSideNav}>Order</Link>
                     <button>Catering</button>
                     <button>Locations</button>
                 </div>
