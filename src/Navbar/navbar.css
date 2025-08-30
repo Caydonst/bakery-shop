@@ -2,11 +2,18 @@
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     position: fixed;
     z-index: 2;
+}
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
 }
 .navbar .title {
     color: #000;
@@ -30,6 +37,7 @@
 .navbar.not-home {
     position: sticky;
     top: 0;
+    background-color: #ffb8e0;
 }
 .menu-btn .menuIcon {
     width: 30px;
@@ -48,7 +56,7 @@
     transition: 0.3s;
 }
 .navbar .order-now-btn:hover {
-    background: #d69abc;
+    background: #141414;
 }
 @media (max-width: 600px) {
     .navbar .order-now-btn {

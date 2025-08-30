@@ -6,6 +6,7 @@
     padding: 50px 20px;
     gap: 25px;
     border-top: 3px solid #ffb8e0;
+    margin-top: 50px;
 }
 .links-container {
     display: flex;

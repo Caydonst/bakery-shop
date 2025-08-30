@@ -7,6 +7,11 @@ export default function HomePage() {
     const [orderNowActive, setOrderNowActive] = useState(false);
 
     useEffect(() => {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.remove("not-home");
+    }, []);
+
+    useEffect(() => {
         const handleScroll = () => {
             const y = window.scrollY;
             if (window.innerWidth < 500) {

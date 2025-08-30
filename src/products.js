@@ -11,6 +11,8 @@ import strawberryCake from "./assets/Cakes/strawberry cake.webp"
 import vanillaAndFudgeTwistCake from "./assets/Cakes/vanilla & fudge twist cake.webp"
 import vanillaFruitCake from "./assets/Cakes/vanilla fruit cake.webp"
 
+
+
 const products = [
     {
         cookieProducts: [

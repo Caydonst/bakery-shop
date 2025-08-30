@@ -1,5 +1,6 @@
 import "./sideNav.css"
 import {XMarkIcon} from '@heroicons/react/24/outline'
+import {Link} from "react-router-dom"
 
 export default function SideNav({sideNavOpen, setSideNavOpen}) {
 
@@ -12,12 +13,12 @@ export default function SideNav({sideNavOpen, setSideNavOpen}) {
 
     return (
         <div className={`side-nav ${sideNavOpen ? "open" : ""}`}>
-            <button className={"close-btn"} onClick={() => closeSideNav()}><XMarkIcon className={"close-icon"}/>
+            <button className={"close-btn"} onClick={closeSideNav}><XMarkIcon className={"close-icon"}/>
             </button>
             <div className={"all-links"}>
                 <div className={"nav-links"}>
-                    <button>Home</button>
-                    <button>Order</button>
+                    <Link to={"/"} onClick={closeSideNav}>Home</Link>
+                    <Link to={"/order"} onClick={closeSideNav}>Order</Link>
                     <button>Catering</button>
                     <button>Locations</button>
                 </div>
