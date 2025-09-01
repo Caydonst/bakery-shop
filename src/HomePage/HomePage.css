@@ -1,3 +1,6 @@
+.HomePage {
+    padding-bottom: 50px;
+}
 .HomePage a {
     text-decoration: none;
 }
@@ -174,7 +177,10 @@
     transition: 0.3s;
     transform: translateY(100%);
 }
-.order-now-popup button {
+.order-now-popup a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     width: 100%;
     background: #ffb8e0;
@@ -186,7 +192,7 @@
     cursor: pointer;
     transition: 0.3s;
 }
-.order-now-popup button:hover {
+.order-now-popup a:hover {
     background: #d69abc;
 }
 .order-now-popup.active {

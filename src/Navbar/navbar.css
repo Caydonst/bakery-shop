@@ -7,6 +7,7 @@
     padding: 0 20px;
     position: fixed;
     z-index: 2;
+    border-bottom: 1px solid transparent;
 }
 .navbar-inner {
     display: flex;
@@ -16,7 +17,7 @@
     max-width: 1600px;
 }
 .navbar .title {
-    color: #000;
+    color: #ffb8e0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,19 +38,20 @@
 .navbar.not-home {
     position: sticky;
     top: 0;
-    background-color: #ffb8e0;
+    background-color: #05000f;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 .menu-btn .menuIcon {
     width: 30px;
     height: 30px;
-    color: #000;
+    color: #ffb8e0;
 }
 .navbar .order-now-btn {
     width: 140px;
     height: 40px;
     border: none;
-    background: #000;
-    color: #fff;
+    background: #ffb8e0;
+    color: #000;
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;

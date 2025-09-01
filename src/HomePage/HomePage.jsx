@@ -2,6 +2,7 @@ import "./HomePage.css"
 import CookieItems from "./cookieItems.jsx";
 import CakeItems from "./cakeItems.jsx"
 import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
 
 export default function HomePage() {
     const [orderNowActive, setOrderNowActive] = useState(false);
@@ -48,7 +49,7 @@ export default function HomePage() {
             </div>
             <CakeItems />
             <div className={`order-now-popup ${orderNowActive ? "active" : ""}`}>
-                <button>Order Now</button>
+                <Link to={"/order"}>Order Now</Link>
             </div>
         </div>
     )
