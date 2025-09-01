@@ -1,7 +1,6 @@
 import "./navbar.css"
 import {useState} from "react";
 import {Bars3Icon} from '@heroicons/react/24/outline';
-import { useLocation } from "react-router-dom";
 
 export default function Navbar({setSideNavOpen}) {
     const [scrollY, setScrollY] = useState(0);

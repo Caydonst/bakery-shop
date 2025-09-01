@@ -1,12 +1,13 @@
 import {useState} from 'react'
 import './App.css'
-import {Routes, Route, useLocation} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Navbar from './Navbar/navbar.jsx'
 import SideNav from "./SideNav/sideNav.jsx"
 import HomePage from "./HomePage/HomePage.jsx"
 import Footer from "./Footer/footer.jsx"
 import ProductPage from "./ProductPage/ProductPage.jsx"
 import OrderPage from "./OrderPage/OrderPage.jsx"
+import CateringPage from "./CateringPage/CateringPage.jsx"
 import ScrollToTop from "./scrollToTop.jsx"
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path={"/"} element={<HomePage />} />
                 <Route path={"/product/:id"} element={<ProductPage />} />
                 <Route path={"/order"} element={<OrderPage />} />
+                <Route path={"/catering"} element={<CateringPage />} />
             </Routes>
             <Footer />
         </>
