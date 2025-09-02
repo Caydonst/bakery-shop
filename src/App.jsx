@@ -8,6 +8,7 @@ import Footer from "./Footer/footer.jsx"
 import ProductPage from "./ProductPage/ProductPage.jsx"
 import OrderPage from "./OrderPage/OrderPage.jsx"
 import CateringPage from "./CateringPage/CateringPage.jsx"
+import OrderingPage from "./OrderingPage/OrderingPage.jsx"
 import ScrollToTop from "./scrollToTop.jsx"
 
 
@@ -25,6 +26,8 @@ function App() {
                 <Route path={"/product/:id"} element={<ProductPage />} />
                 <Route path={"/order"} element={<OrderPage />} />
                 <Route path={"/catering"} element={<CateringPage />} />
+                <Route path={"/order/carry-out"} element={<OrderingPage />} />
+                <Route path={"/order/delivery"} element={<OrderingPage />} />
             </Routes>
             <Footer />
         </>
