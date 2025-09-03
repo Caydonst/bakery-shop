@@ -4,7 +4,6 @@ import {Routes, Route} from "react-router-dom";
 import Navbar from './Navbar/navbar.jsx'
 import SideNav from "./SideNav/sideNav.jsx"
 import HomePage from "./HomePage/HomePage.jsx"
-import Footer from "./Footer/footer.jsx"
 import ProductPage from "./ProductPage/ProductPage.jsx"
 import OrderPage from "./OrderPage/OrderPage.jsx"
 import CateringPage from "./CateringPage/CateringPage.jsx"
@@ -29,7 +28,6 @@ function App() {
                 <Route path={"/order/carry-out"} element={<OrderingPage />} />
                 <Route path={"/order/delivery"} element={<OrderingPage />} />
             </Routes>
-            <Footer />
         </>
     )
 }
