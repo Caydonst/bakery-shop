@@ -8,8 +8,8 @@ import Footer from "./Footer/footer.jsx"
 import ProductPage from "./ProductPage/ProductPage.jsx"
 import OrderPage from "./OrderPage/OrderPage.jsx"
 import CateringPage from "./CateringPage/CateringPage.jsx"
-import OrderingPage from "./OrderingPage/OrderingPage.jsx"
 import ScrollToTop from "./scrollToTop.jsx"
+import OrderingPage from "./OrderingPage/OrderingPage.jsx"
 
 
 function App() {
