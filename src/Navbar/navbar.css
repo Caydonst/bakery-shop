@@ -56,9 +56,13 @@
     border-radius: 50px;
     cursor: pointer;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 .navbar .order-now-btn:hover {
-    background: #141414;
+    background: #fff;
 }
 @media (max-width: 600px) {
     .navbar .order-now-btn {

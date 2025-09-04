@@ -2,7 +2,7 @@ import {useState} from "react"
 import {PlusIcon} from "@heroicons/react/24/outline"
 import {MinusIcon} from "@heroicons/react/24/outline"
 
-export default function Item({id, img, name, addItem, removeItem}) {
+export default function Item({id, img, name, addItem, removeItem, bagItems, totalItems}) {
     const [quantity, setQuantity] = useState(0);
 
     const changeQuantity = (num) => {
@@ -26,7 +26,7 @@ export default function Item({id, img, name, addItem, removeItem}) {
             <div className={"item-qty-container"}>
                 <button onClick={() => changeQuantity(-1)} disabled={quantity === 0}><MinusIcon /></button>
                 <p>{quantity}</p>
-                <button onClick={() => changeQuantity(1)}><PlusIcon /></button>
+                <button onClick={() => changeQuantity(1)} disabled={bagItems.length === totalItems}><PlusIcon /></button>
             </div>
         </div>
     )

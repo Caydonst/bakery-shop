@@ -43,7 +43,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .ordering-page-items .items-wrapper::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 .ordering-page-items .items-wrapper::-webkit-scrollbar-track {
     background: transparent;
@@ -129,6 +129,9 @@
 .item-qty-container button:disabled > * {
     color: rgba(255, 255, 255, 0.1);
 }
+.item-qty-container button:disabled {
+    cursor: auto;
+}
 /* ============================ BAG =============================== */
 .ordering-page-bag-wrapper {
     display: flex;
@@ -159,14 +162,71 @@
     font-size: 30px;
 }
 .cookie-box {
-    width: 324px;
-    height: 224px;
+    width: 474px;
+    height: 324px;
     background: #ffa3d7;
+    outline: 5px solid #ffa3d7;
     padding: 10px;
     border: 2px solid #fff;
+    box-shadow: 16px 16px 0px rgba(0, 0, 0, 0.3);
 }
 .cookie-box img {
-    width: 100px;
+    width: 150px;
+    height: 150px;
+    animation: fade-in 0.3s;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* =========================== MOBILE BAG ========================== */
+.ordering-page-bag-popup-wrapper {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+}
+.ordering-page-bag-popup {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: none;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    padding: 0 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ordering-page-bag-popup:hover {
+    background: #ffb8e0;
+}
+.ordering-page-bag-popup:disabled {
+    background: #242424;
+    cursor: unset;
+}
+.ordering-page-bag-popup > p:first-child {
+    font-weight: 800;
+    font-size: 18px;
+}
+.ordering-page-bag-popup > p:last-child {
+    font-weight: 400;
+    font-size: 18px;
+}
+.item-amt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
 }
 @media (max-width: 1500px) {
     .ordering-page-content-wrapper {
@@ -183,44 +243,6 @@
         font-size: 12px;
     }
 }
-/* =========================== MOBILE BAG ========================== */
-.ordering-page-bag-popup-wrapper {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(to bottom, transparent, #000);
-}
-.ordering-page-bag-popup {
-    width: 100%;
-    height: 40px;
-    background: #ffb8e0;
-    color: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px;
-    padding: 0 14px;
-    cursor: pointer;
-}
-.ordering-page-bag-popup-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    gap: 10px;
-}
-.item-amt-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70%;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #000;
-    color: #fff;
-}
 @media (max-width: 1000px) {
     .ordering-page-content-wrapper {
         flex-direction: column;
@@ -229,7 +251,7 @@
     .ordering-page-bag-wrapper {
         width: 100%;
         padding: 30px 0;
-        height: 50%;
+        height: 40%;
     }
     .ordering-page-items-header {
         padding: 0;
@@ -241,14 +263,33 @@
         width: 100%;
         max-width: 100%;
         padding: 0;
-        height: 50%;
+        height: 60%;
     }
     .ordering-page-items .items-wrapper {
         width: 100%;
         overflow-y: auto;
         height: 100%;
-        padding: 0 10px;
-        border: none;
+        padding: 0 10px 66px 10px;
+    }
+    .ordering-page-bag-popup-wrapper {
+        position: fixed;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent, #000);
+    }
+    .ordering-page-bag-popup {
+        height: 40px;
+    }
+    .cookie-box {
+        width: 324px;
+        height: 224px;
+        background: #ffa3d7;
+        outline: 5px solid #ffa3d7;
+        padding: 10px;
+        border: 2px solid #fff;
+    }
+    .cookie-box img {
+        width: 100px;
+        height: 100px;
     }
 }
 @media (max-width: 700px) {
@@ -276,6 +317,7 @@
     }
     .cookie-box img {
         width: 66px;
+        height: 66px;
     }
 }
 @media (max-width: 500px) {
@@ -290,7 +332,7 @@
         font-size: 20px;
     }
     .ordering-page-item-info-container img {
-        width: 60px;
+        width: 50px;
     }
     .item-qty-container button {
         width: 34px;
@@ -305,5 +347,8 @@
     .item-qty-container p {
         font-size: 14px;
         width: 30px;
+    }
+    .ordering-page-items .items-wrapper {
+        padding: 0 10px 56px 10px;
     }
 }

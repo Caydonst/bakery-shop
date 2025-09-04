@@ -5,6 +5,7 @@ import {useState} from "react"
 
 export default function OrderingPage() {
     const [bagItems, setBagItems] = useState([])
+    const [totalItems, setTotalItems] = useState(6)
 
     const addItem = (item) => {
         setBagItems(prev => [...prev, item])
@@ -37,25 +38,24 @@ export default function OrderingPage() {
                 </div>
                 <div className={"ordering-page-items"}>
                     <div className={"ordering-page-items-header"}>
-                        <h1>Pick Your Deserts</h1>
+                        <h1>Pick Your Flavors</h1>
                     </div>
                     <div className={"items-wrapper"}>
                         <div className={"cookie-items-container"}>
                             {products[0].cookieProducts.map((product) => (
-                                <Item id={product.id} img={product.image} name={product.name} addItem={addItem} removeItem={removeItem} />
+                                <Item id={product.id} img={product.image} name={product.name} addItem={addItem} removeItem={removeItem} bagItems={bagItems} totalItems={totalItems} />
                             ))}
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className={"ordering-page-bag-popup-wrapper"}>
-                <div className={"ordering-page-bag-popup"}>
-                    <p>Your Bag</p>
-                    <div className={"ordering-page-bag-popup-content"}>
-                        <p>$32.99</p>
-                        <div className={"item-amt-container"}>
-                            <p>3</p>
-                        </div>
+                    <div className={"ordering-page-bag-popup-wrapper"}>
+                        <button className={"ordering-page-bag-popup"} disabled={bagItems.length < totalItems}>
+                            {bagItems.length < totalItems
+                                ?
+                                <p>Add {totalItems - bagItems.length} More</p>
+                                :
+                                <p>Add to Bag</p>}
+                            <p>$32.99</p>
+                        </button>
                     </div>
                 </div>
             </div>

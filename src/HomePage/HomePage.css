@@ -193,7 +193,7 @@
     transition: 0.3s;
 }
 .order-now-popup a:hover {
-    background: #d69abc;
+    background: #fff;
 }
 .order-now-popup.active {
     transform: translateY(0);

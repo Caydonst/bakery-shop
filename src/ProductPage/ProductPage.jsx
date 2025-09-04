@@ -10,7 +10,6 @@ export default function ProductPage() {
 
     const allProducts = [
         ...products[0].cookieProducts,
-        ...products[1].cakeProducts
     ];
 
     const { id } = useParams();
