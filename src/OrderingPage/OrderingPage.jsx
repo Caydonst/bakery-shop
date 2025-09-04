@@ -1,7 +1,7 @@
 import "./OrderingPage.css"
 import products from "../products.js"
 import Item from "./item.jsx"
-import {useState} from "react";
+import {useState} from "react"
 
 export default function OrderingPage() {
     const [bagItems, setBagItems] = useState([])
@@ -9,8 +9,17 @@ export default function OrderingPage() {
     const addItem = (item) => {
         setBagItems(prev => [...prev, item])
     }
-    const removeItem = (item) => {
+    const removeItem = (id) => {
+        setBagItems((prevItems) => {
+            const index = prevItems.findIndex(item => item.id === id);
+            if (index === -1) return prevItems; // not found, no change
 
+            // make a copy of array
+            const newItems = [...prevItems];
+            // remove only one at that index
+            newItems.splice(index, 1);
+            return newItems;
+        });
     }
 
     return (
@@ -18,8 +27,11 @@ export default function OrderingPage() {
             <div className={"ordering-page-content-wrapper"}>
                 <div className={"ordering-page-bag-wrapper"}>
                     <div className={"ordering-page-bag"}>
-                        <div className={"ordering-page-bag-header"}>
-                            <h3>Your Bag</h3>
+                        <div className={"cookie-box"}>
+                            {bagItems.length > 0 &&
+                                bagItems.map((item) => (
+                                <img src={item.image} />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -30,13 +42,7 @@ export default function OrderingPage() {
                     <div className={"items-wrapper"}>
                         <div className={"cookie-items-container"}>
                             {products[0].cookieProducts.map((product) => (
-                                <Item img={product.image} name={product.name} addItem={addItem} />
-                            ))}
-                        </div>
-                        <div className={"cake-items-container"}>
-
-                            {products[1].cakeProducts.map((product) => (
-                                <Item img={product.image} name={product.name} addItem={addItem} />
+                                <Item id={product.id} img={product.image} name={product.name} addItem={addItem} removeItem={removeItem} />
                             ))}
                         </div>
                     </div>

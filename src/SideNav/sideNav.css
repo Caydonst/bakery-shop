@@ -30,12 +30,16 @@
     top: 15px;
     left: 15px;
     cursor: pointer;
+    transition: 0.3s;
 }
 .close-icon {
     width: 30px;
     height: 30px;
     color: #05000f;
     transition: 0.3s;
+}
+.close-btn:hover {
+    background: #fff;
 }
 .close-btn:hover .close-icon {
     rotate: 180deg;
@@ -57,27 +61,27 @@
 .nav-links button {
     background: transparent;
     border: none;
-    color: #ffb8e0;
+    color: #fff;
     font-size: 40px;
     font-weight: 700;
     transition: 0.2s;
     cursor: pointer;
 }
 .nav-links button:hover {
-    color: #fff;
+    color: #ffb8e0;
 }
 .nav-links a {
     text-decoration: none;
     background: transparent;
     border: none;
-    color: #ffb8e0;
+    color: #fff;
     font-size: 40px;
     font-weight: 700;
     transition: 0.2s;
     cursor: pointer;
 }
 .nav-links a:hover {
-    color: #fff;
+    color: #ffb8e0;
 }
 .all-links .socials-container {
     display: flex;

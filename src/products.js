@@ -10,13 +10,6 @@ import oatmealRaisinCookie from "./assets/Cookies/oatmeal raisin cookie.webp";
 import snickerdoodleCookie from "./assets/Cookies/snickerdoodle cookie.webp";
 import doubleChocolateChunkCookie from "./assets/Cookies/double chocolate chunk cookie.webp";
 
-import brownSugarVanillaCreamCake from "./assets/Cakes/brown sugar vanilla cream cake.webp"
-import chocolateFruitCake from "./assets/Cakes/chocolate fruit cake.webp"
-import doubleFudgeCake from "./assets/Cakes/double fudge cake.webp"
-import strawberryCake from "./assets/Cakes/strawberry cake.webp"
-import vanillaAndFudgeTwistCake from "./assets/Cakes/vanilla & fudge twist cake.webp"
-import vanillaFruitCake from "./assets/Cakes/vanilla fruit cake.webp"
-
 
 
 const products = [
@@ -32,16 +25,6 @@ const products = [
             { id: 8, name: "Oatmeal Raisin Cookie", image: oatmealRaisinCookie },
             { id: 9, name: "Snickerdoodle Cookie", image: snickerdoodleCookie },
             { id: 10, name: "Double Chocolate Chunk Cookie", image: doubleChocolateChunkCookie },
-        ]
-    },
-    {
-        cakeProducts: [
-            { id: 7, name: "Brown Sugar Vanilla Cream Cake", image: brownSugarVanillaCreamCake },
-            { id: 8, name: "Chocolate Fruit Cake", image: chocolateFruitCake },
-            { id: 9, name: "Double Fudge Cake", image: doubleFudgeCake },
-            { id: 10, name: "Strawberry Cake", image: strawberryCake },
-            { id: 11, name: "Vanilla and Fudge Twist Cake", image: vanillaAndFudgeTwistCake },
-            { id: 12, name: "Vanilla Fruit Cake", image: vanillaFruitCake }
         ]
     }
 ]

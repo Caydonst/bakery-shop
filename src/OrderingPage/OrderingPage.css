@@ -69,12 +69,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
     gap: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.order-page-item:last-child {
-    border-color: red;
 }
 .ordering-page-item-info-container {
     display: flex;
@@ -145,9 +142,9 @@
     height: 100%;
     width: 100%;
     background: #ffb8e0;
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -160,6 +157,16 @@
 .ordering-page-bag-header h3 {
     color: #000;
     font-size: 30px;
+}
+.cookie-box {
+    width: 324px;
+    height: 224px;
+    background: #ffa3d7;
+    padding: 10px;
+    border: 2px solid #fff;
+}
+.cookie-box img {
+    width: 100px;
 }
 @media (max-width: 1500px) {
     .ordering-page-content-wrapper {
@@ -178,6 +185,7 @@
 }
 /* =========================== MOBILE BAG ========================== */
 .ordering-page-bag-popup-wrapper {
+    display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -213,18 +221,27 @@
     background: #000;
     color: #fff;
 }
-@media (max-width: 1050px) {
-    .ordering-page {
-        height: 100%;
-        min-height: calc(100svh - 60px);
-        padding: 0 0 20px 0;
+@media (max-width: 1000px) {
+    .ordering-page-content-wrapper {
+        flex-direction: column;
+        gap: 0;
     }
     .ordering-page-bag-wrapper {
-        display: none;
+        width: 100%;
+        padding: 30px 0;
+        height: 50%;
+    }
+    .ordering-page-items-header {
+        padding: 0;
+    }
+    .ordering-page-items-header h1 {
+        font-size: 30px;
     }
     .ordering-page-items {
         width: 100%;
         max-width: 100%;
+        padding: 0;
+        height: 50%;
     }
     .ordering-page-items .items-wrapper {
         width: 100%;
@@ -238,23 +255,39 @@
     .ordering-page-content-wrapper {
         padding: 0;
     }
+    .ordering-page-bag-wrapper {
+        padding: 0;
+    }
+    .ordering-page-items-header {
+        padding-top: 20px;
+    }
     .ordering-page-bag {
         border-radius: 0;
     }
+    .ordering-page-bag-wrapper {
+        height: 30%;
+    }
+    .ordering-page-items {
+        height: 70%;
+    }
+    .cookie-box {
+        width: 222px;
+        height: 162px;
+    }
+    .cookie-box img {
+        width: 66px;
+    }
 }
 @media (max-width: 500px) {
-    .ordering-page {
-        padding-bottom: 70px;
-    }
     .ordering-page-items {
         padding: 0;
         gap: 0;
     }
     .ordering-page-items-header {
-        padding: 30px 0;
+        padding: 20px 0;
     }
     .ordering-page-items-header h1 {
-        font-size: 30px;
+        font-size: 20px;
     }
     .ordering-page-item-info-container img {
         width: 60px;
