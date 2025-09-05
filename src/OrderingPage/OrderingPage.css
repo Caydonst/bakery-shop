@@ -162,8 +162,8 @@
     font-size: 30px;
 }
 :root {
-    --cookie-width: 100px;
-    --cookie-height: 100px;
+    --cookie-width: 120px;
+    --cookie-height: 120px;
 }
 .cookie-box {
     width: calc((var(--cookie-width) * 3) + 24px);
@@ -248,6 +248,10 @@
     }
 }
 @media (max-width: 1000px) {
+    :root {
+        --cookie-width: 60px;
+        --cookie-height: 60px;
+    }
     .ordering-page-content-wrapper {
         flex-direction: column;
         gap: 0;
