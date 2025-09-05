@@ -1,4 +1,5 @@
 import "./CookiePackPage.css"
+import {Link} from "react-router-dom";
 
 export default function CookiePackPage() {
     return (
@@ -7,13 +8,15 @@ export default function CookiePackPage() {
                 <h1>Choose Your Box</h1>
             </div>
             <div className={"boxes-container"}>
-                <div className={"box"}>
-                    <div className={"box-img-container"}></div>
-                    <div className={"box-info-container"}>
-                        <p>Single</p>
-                        <p>$3.99</p>
+                <Link to={"1-pack"}>
+                    <div className={"box"}>
+                        <div className={"box-img-container"}></div>
+                        <div className={"box-info-container"}>
+                            <p>Single</p>
+                            <p>$3.99</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className={"box"}>
                     <div className={"box-img-container"}></div>
                     <div className={"box-info-container"}>

@@ -26,10 +26,8 @@ function App() {
                 <Route path={"/product/:id"} element={<ProductPage />} />
                 <Route path={"/order"} element={<OrderPage />} />
                 <Route path={"/catering"} element={<CateringPage />} />
-                <Route path={"/order/carry-out/cookie-boxes"} element={<CookiePackPage />} />
-                <Route path={"/order/delivery/cookie-boxes"} element={<CookiePackPage />} />
-                <Route path={"/order/carry-out"} element={<OrderingPage />} />
-                <Route path={"/order/delivery"} element={<OrderingPage />} />
+                <Route path={"/order/carry-out"} element={<CookiePackPage />} />
+                <Route path={"/order/delivery"} element={<CookiePackPage />} />
             </Routes>
         </>
     )

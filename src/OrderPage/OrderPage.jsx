@@ -9,13 +9,13 @@ export default function OrderPage() {
             </div>
             <div className={"order-page-options"}>
                 <div className={"order-page-options-inner"}>
-                    <Link to={"/order/delivery/cookie-boxes"}>
+                    <Link to={"delivery"}>
                         <div className={"order-page-delivery"}>
                             <i className="fa-solid fa-car"></i>
                             <h1>Delivery</h1>
                         </div>
                     </Link>
-                    <Link to={"/order/carry-out/cookie-boxes"}>
+                    <Link to={"carry-out"}>
                         <div className={"order-page-pickup"}>
                             <i className="fa-solid fa-house"></i>
                             <h1>Pickup</h1>
