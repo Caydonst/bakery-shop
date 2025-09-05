@@ -4,6 +4,7 @@ import CakeItems from "./cakeItems.jsx"
 import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import Footer from "../Footer/footer.jsx"
+import bannerImg from "../assets/Banner/banner.webp"
 
 export default function HomePage() {
     const [orderNowActive, setOrderNowActive] = useState(false);
@@ -34,8 +35,7 @@ export default function HomePage() {
         <>
             <div className={"HomePage"}>
                 <div className="banner">
-                    <img
-                        src="https://st3.depositphotos.com/1854227/12969/i/950/depositphotos_129694254-stock-photo-table-with-cakes-cookies-cupcakes.jpg"/>
+                    <img src={bannerImg} />
                     <button>Order Now</button>
                 </div>
                 <div className="title-section">
