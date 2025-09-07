@@ -1,7 +1,11 @@
 import "./OrderPage.css"
 import {Link} from "react-router-dom"
+import {useEffect} from "react";
 
-export default function OrderPage() {
+export default function OrderPage({setNavbarNotHome}) {
+
+    setNavbarNotHome(true)
+
     return (
         <div className={"order-page"}>
             <div className={"order-page-header"}>

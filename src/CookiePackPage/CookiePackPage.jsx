@@ -8,7 +8,7 @@ export default function CookiePackPage() {
                 <h1>Choose Your Box</h1>
             </div>
             <div className={"boxes-container"}>
-                <Link to={"1-pack"}>
+                <Link to={"1-pack"} state={{ quantity: 1 }}>
                     <div className={"box"}>
                         <div className={"box-img-container"}></div>
                         <div className={"box-info-container"}>
@@ -17,20 +17,24 @@ export default function CookiePackPage() {
                         </div>
                     </div>
                 </Link>
-                <div className={"box"}>
-                    <div className={"box-img-container"}></div>
-                    <div className={"box-info-container"}>
-                        <p>4-Pack</p>
-                        <p>$14.99</p>
+                <Link to={"4-pack"} state={{ quantity: 4 }}>
+                    <div className={"box"}>
+                        <div className={"box-img-container"}></div>
+                        <div className={"box-info-container"}>
+                            <p>4-Pack</p>
+                            <p>$14.99</p>
+                        </div>
                     </div>
-                </div>
-                <div className={"box"}>
-                    <div className={"box-img-container"}></div>
-                    <div className={"box-info-container"}>
-                        <p>6-Pack</p>
-                        <p>$22.99</p>
+                </Link>
+                <Link to={"6-pack"} state={{ quantity: 6 }}>
+                    <div className={"box"}>
+                        <div className={"box-img-container"}></div>
+                        <div className={"box-info-container"}>
+                            <p>6-Pack</p>
+                            <p>$22.99</p>
+                        </div>
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
     )

@@ -1,11 +1,19 @@
 import "./OrderingPage.css"
 import products from "../products.js"
 import Item from "./item.jsx"
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { useLocation } from "react-router-dom";
 
 export default function OrderingPage() {
     const [bagItems, setBagItems] = useState([])
     const [totalItems, setTotalItems] = useState(6)
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.state?.quantity) {
+            setTotalItems(location.state.quantity);
+        }
+    }, [location.state?.quantity]);
 
     const addItem = (item) => {
         setBagItems(prev => [...prev, item])

@@ -6,8 +6,10 @@ import {Link} from "react-router-dom";
 import Footer from "../Footer/footer.jsx"
 import bannerImg from "../assets/Banner/banner.webp"
 
-export default function HomePage() {
+export default function HomePage({setNavbarNotHome}) {
     const [orderNowActive, setOrderNowActive] = useState(false);
+
+    setNavbarNotHome(false)
 
     useEffect(() => {
         const navbar = document.getElementById("navbar");
@@ -36,7 +38,7 @@ export default function HomePage() {
             <div className={"HomePage"}>
                 <div className="banner">
                     <img src={bannerImg} />
-                    <button>Order Now</button>
+                    <Link to={"/order"}>Order Now</Link>
                 </div>
                 <div className="title-section">
                     <p>Jul 28 - Aug 4</p>

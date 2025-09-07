@@ -15,7 +15,7 @@ const CookieItems = React.memo(() => {
                         <h1>{product.name}</h1>
                         <div className="buttons">
                             <button>Learn More</button>
-                            <button>Order Now</button>
+                            <Link to={"/order"}>Order Now</Link>
                         </div>
                     </div>
                 </Link>

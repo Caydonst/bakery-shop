@@ -1,12 +1,14 @@
 import "./ProductPage.css"
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import products from "../products.js"
 import {useState} from "react";
 import {ChevronDownIcon} from "@heroicons/react/24/outline";
 
-export default function ProductPage() {
+export default function ProductPage({setNavbarNotHome}) {
     const [openNutrition, setOpenNutrition] = useState(false);
     const [openAllergy, setOpenAllergy] = useState(false);
+
+    setNavbarNotHome(true)
 
     const allProducts = [
         ...products[0].cookieProducts,
@@ -56,7 +58,7 @@ export default function ProductPage() {
                                 </p>
                             </div>
                             <div className={"product-buttons"}>
-                                <button>Order Now</button>
+                                <Link to={"/order"}>Order Now</Link>
                             </div>
                         </div>
                     </div>

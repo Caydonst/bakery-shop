@@ -1,7 +1,10 @@
 import "./CateringPage.css"
 import CateringImg from "../assets/Cookies/chocolate chip cookie.webp"
 
-export default function CateringPage() {
+export default function CateringPage({setNavbarNotHome}) {
+
+    setNavbarNotHome(true)
+
     return (
         <div className={"catering-page"}>
             <div className={"light"}></div>
